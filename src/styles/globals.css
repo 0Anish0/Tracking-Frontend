@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --primary: 25 118 210;
+  --primary-foreground: 255 255 255;
+  --secondary: 220 0 78;
+  --secondary-foreground: 255 255 255;
+  --success: 76 175 80;
+  --success-foreground: 255 255 255;
+  --warning: 255 152 0;
+  --warning-foreground: 0 0 0;
+  --error: 244 67 54;
+  --error-foreground: 255 255 255;
+  --info: 33 150 243;
+  --info-foreground: 255 255 255;
+  
+  /* Background */
+  --background: 248 250 252;
+  --foreground: 26 32 44;
+  --card: 255 255 255;
+  --card-foreground: 26 32 44;
+  --popover: 255 255 255;
+  --popover-foreground: 26 32 44;
+  
+  /* Muted */
+  --muted: 241 245 249;
+  --muted-foreground: 113 128 150;
+  
+  /* Accent */
+  --accent: 241 245 249;
+  --accent-foreground: 26 32 44;
+  
+  /* Destructive */
+  --destructive: 244 67 54;
+  --destructive-foreground: 255 255 255;
+  
+  /* Border */
+  --border: 226 232 240;
+  --input: 226 232 240;
+  
+  /* Ring */
+  --ring: 25 118 210;
+  
+  /* Radius */
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+}
+
+/* Pulse animation for live indicators */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(var(--primary), 0.15);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--muted-foreground) / 0.5);
+} 
