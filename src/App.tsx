@@ -272,7 +272,6 @@ function App() {
           </form>
 
           <div className="mt-6 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
-            <p>Demo credentials: admin / admin123</p>
           </div>
         </div>
       </div>
