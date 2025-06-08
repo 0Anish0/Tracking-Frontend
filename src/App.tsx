@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { io, Socket } from 'socket.io-client';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { LatLngBounds } from 'leaflet';
 import { Users, MapPin, Clock, Gauge, LogOut, Eye, EyeOff } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
 import './styles/globals.css';
+import { BACKEND_URL } from './config';
 
 // Fix for default markers in react-leaflet
 import L from 'leaflet';
@@ -39,7 +39,7 @@ interface Location {
   isOnline: boolean;
 }
 
-const SOCKET_URL = 'http://localhost:3001';
+const SOCKET_URL = BACKEND_URL;
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
